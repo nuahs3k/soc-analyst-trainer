@@ -53,7 +53,9 @@ Copy code
 
 ### **Step 1 — Clone the repo**
 
-```powershell
+**All Platforms:**
+
+```bash
 git clone https://github.com/YOUR_USERNAME/soc-analyst-trainer.git
 cd soc-analyst-trainer
 If you don’t have Git, download the ZIP from GitHub and extract it.
@@ -74,7 +76,9 @@ source venv/bin/activate
 Keeps project dependencies separate from your system Python.
 
 Step 3 — Install Dependencies
-powershell
+All Platforms:
+
+bash
 Copy code
 pip install -r requirements.txt
 This installs Streamlit, pandas, OpenAI, and other necessary packages.
@@ -98,7 +102,7 @@ ini
 Copy code
 OPENAI_API_KEY=your_openai_api_key_here
 AI_MODE=online
-Replace your_openai_api_key_here with your key.
+Replace your_openai_api_key_here with the key you generated.
 
 Do not commit .env to GitHub.
 
@@ -107,25 +111,24 @@ Privacy tip: Use only sanitized sample logs.
 Step 5 — Offline Mode Setup (Local AI Model)
 Offline mode allows you to practice without internet or an OpenAI key.
 
-Install Ollama (recommended)
+Step 5a — Install Ollama (recommended)
 
 Ollama download & install
 
-Or use GPT4All if preferred: GPT4All
+Step 5b — Or install GPT4All if preferred:
 
-Run the local model
+GPT4All
 
-For Ollama:
+Step 5c — Run the local model
+
+Windows PowerShell or macOS/Linux Terminal:
 
 powershell
 Copy code
 ollama run llama2
-For GPT4All:
-
-powershell
-Copy code
+# or for GPT4All
 gpt4all --model <local-model-file>
-Configure .env file for offline mode:
+Step 5d — Configure .env file for offline mode:
 
 ini
 Copy code
@@ -133,7 +136,14 @@ AI_MODE=offline
 Ensure the local model is running before starting the Streamlit app.
 
 Step 6 — Run the App
+Windows PowerShell:
+
 powershell
+Copy code
+streamlit run app.py
+macOS/Linux Terminal:
+
+bash
 Copy code
 streamlit run app.py
 Streamlit will open a browser automatically.
@@ -211,4 +221,3 @@ Take screenshots or record walkthroughs for a GitHub portfolio or LinkedIn showc
 Experiment with offline mode to learn without internet dependency.
 
 Extend the app with your own attack scenarios or simulated enterprise logs.
-
