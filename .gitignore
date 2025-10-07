@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Environment variables
+.env
+
+# Streamlit cache/logs
+.streamlit/
+
+# Optional: large files
+*.csv
+*.log
+*.png
